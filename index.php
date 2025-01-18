@@ -32,31 +32,29 @@ include 'includes/db.php';
     </div>
 
     <div class="container py-5">
-    <h2 class="text-center mb-4">Available Auction Items</h2>
-    <div class="row">
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                <img src="assets/images/abstract_painting.png" class="card-img-top" alt="Abstract Painting">
-                <div class="card-body">
-                    <h5 class="card-title">Abstract Painting</h5>
-                    <p class="card-text">A vibrant abstract painting.</p>
-                    <p class="card-text"><strong>Starting Price: £3,000</strong></p>
+        <h2 class="text-center mb-4">Available Auction Items</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="assets/images/abstract_painting.png" class="card-img-top" alt="Abstract Painting">
+                    <div class="card-body">
+                        <h5 class="card-title">Abstract Painting</h5>
+                        <p class="card-text">A vibrant abstract painting.</p>
+                        <p class="card-text"><strong>Starting Price: £3,000</strong></p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                <img src="assets/images/golden_vase.png" class="card-img-top" alt="Golden Vase">
-                <div class="card-body">
-                    <h5 class="card-title">Golden Vase</h5>
-                    <p class="card-text">A rare golden vase from the 19th century.</p>
-                    <p class="card-text"><strong>Starting Price: £5,000</strong></p>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="assets/images/golden_vase.png" class="card-img-top" alt="Golden Vase">
+                    <div class="card-body">
+                        <h5 class="card-title">Golden Vase</h5>
+                        <p class="card-text">A rare golden vase from the 19th century.</p>
+                        <p class="card-text"><strong>Starting Price: £5,000</strong></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-
 </body>
 </html>
