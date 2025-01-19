@@ -24,8 +24,25 @@
                 <ul class="nav">
                     <li class="nav-item"><a class="nav-link text-white" href="../index.php">Home</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="../pages/auction.php">Auctions</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="../pages/user_profile.php">My Account</a></li>
+                    <?php if (isset($_SESSION['user_role'])): ?>
+                        <?php if ($_SESSION['user_role'] == 'buyer' || $_SESSION['user_role'] == 'joint'): ?>
+                            <li class="nav-item"><a class="nav-link text-white" href="../pages/bid_history.php">Bid History</a></li>
+                        <?php endif; ?>
+                        <?php if ($_SESSION['user_role'] == 'seller' || $_SESSION['user_role'] == 'joint'): ?>
+                            <li class="nav-item"><a class="nav-link text-white" href="../pages/sell_item.php">Sell Item</a></li>
+                        <?php endif; ?>
+                        <?php if ($_SESSION['user_role'] == 'admin'): ?>
+                            <li class="nav-item"><a class="nav-link text-white" href="../admin/dashboard.php">Admin Panel</a></li>
+                        <?php endif; ?>
+                        <li class="nav-item"><a class="nav-link text-white" href="../pages/logout.php">Logout</a></li>
+                    <?php else: ?>
+                        <li class="nav-item"><a class="nav-link text-white" href="../pages/login.php">Login</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="../pages/register.php">Register</a></li>
+                    <?php endif; ?>
                 </ul>
             </nav>
+
+
         </div>
+
     </header>

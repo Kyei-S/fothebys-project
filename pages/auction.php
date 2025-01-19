@@ -6,9 +6,30 @@ include '../includes/db.php';
 include '../includes/header.php'; // Include the shared header
 
 // Fetch auction items
-$sql = "SELECT * FROM Auction_Items";
-$result = $conn->query($sql);
+$search = isset($_GET['search']) ? trim($_GET['search']) : '';
+if (!empty($search)) {
+    $sql = "SELECT * FROM Auction_Items WHERE title LIKE ? OR description LIKE ?";
+    $stmt = $conn->prepare($sql);
+    $likeSearch = '%' . $search . '%';
+    $stmt->bind_param("ss", $likeSearch, $likeSearch);
+    $stmt->execute();
+    $result = $stmt->get_result();
+} else {
+    $sql = "SELECT * FROM Auction_Items";
+    $result = $conn->query($sql);
+}
+
 ?>
+
+<div class="container py-3">
+    <form action="" method="GET" class="d-flex justify-content-center">
+        <input type="text" name="search" class="form-control" placeholder="Search items..." 
+               value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>" 
+               style="max-width: 600px; border-radius: 20px;">
+        <button type="submit" class="btn btn-primary ms-2" style="border-radius: 20px;">Search</button>
+    </form>
+</div>
+
 
 
     <!-- Auction Items Section -->
