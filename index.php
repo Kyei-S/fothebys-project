@@ -15,7 +15,7 @@ include 'includes/db.php';
     <header class="bg-dark text-white py-3">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="logo">
-                <img src="assets/images/Fothebylogo2.jpg" alt="Fotheby’s Logo" style="width: 150px;">
+            <img src="assets/images/EditedLogo.png" alt="Fotheby’s Logo" style="width: 200px; height: 100px;">
             </div>
             <nav>
                 <ul class="nav">
@@ -32,8 +32,8 @@ include 'includes/db.php';
     </div>
 
     <div class="container py-5">
-        <h2 class="text-center mb-4">Available Auction Items</h2>
-        <div class="row">
+    <h2 class="text-center mb-4" style="margin-top: -40px;">Available Auction Items</h2>
+    <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <img src="assets/images/abstract_painting.png" class="card-img-top" alt="Abstract Painting">

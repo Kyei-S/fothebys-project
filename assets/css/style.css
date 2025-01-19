@@ -48,3 +48,33 @@ header {
 .card:hover img {
     transform: scale(1.1); /* Slightly zoom the image */
 }
+
+.text-decoration-none:hover {
+    text-decoration: underline;
+    color: #C5A880;
+}
+
+header h2 {
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+header h3 {
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+header h4 {
+    margin-top: 100px;
+    font-weight: normal;
+    margin-bottom: 90%; /* Adjust the value to control the spacing */
+}
+
+header .logo img {
+    height: 100%; /* Ensures it scales to header height */
+    width: auto; /* Maintains aspect ratio */
+    max-height: 70px; /* Adjust max height as needed */
+    margin-left: 0; /* Ensures no unwanted spacing */
+}
+
+
